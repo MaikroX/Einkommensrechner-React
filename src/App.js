@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Dashboard from "./components/dashboard";
+import Footer from "./components/footer";
+import ActionButton from "./components/frontActionButtons";
+import NavHeader from "./components/navbar";
+import TableTop from "./components/table-top";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./components/components.css";
+import "./App.css";
+import NeuesEinkommenTemp from "./components/neuesEinkommenTemp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="d-flex flex-column min-vh-100">
+      <NavHeader />
+
+      <div id="content" style={{ flex: "1" }}>
+        <Dashboard />
+        <ActionButton />
+        <TableTop />
+        <NeuesEinkommenTemp />
+      </div>
+
+      <Footer />
     </div>
   );
 }

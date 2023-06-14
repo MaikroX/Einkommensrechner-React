@@ -1,0 +1,105 @@
+.sums-drop-shadow {
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.35));
+}
+
+.border-middle-content {
+  border-left: solid 2px #ffffff40;
+  border-right: solid 2px #ffffff40;
+}
+
+.btn-primary-edit {
+  background-color: var(--primary-edit);
+}
+
+.archive-btn {
+  position: absolute;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-edit);
+}
+
+.modal-einkommen .modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.table-inner-fs {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.show-workings-time {
+  font-size: 0.6rem;
+}
+
+.toggleIndex {
+  z-index: -1 !important;
+  pointer-events: none;
+}
+
+.incoming-border-right-openIncoming {
+  border-right: solid 8px #ffc008;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.incoming-border-right-paidIncoming {
+  border-right: solid 8px #007bff;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.rounded-left {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.btn-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.paid-btn {
+  position: absolute;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 33%;
+}
+
+.unpaid-btn {
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  transform: translate(-0%, 0);
+  width: 34%;
+  color: white;
+}
+
+.unpaid-btn.btn-warning:hover {
+  color: white;
+}
+
+.unpaid-btn.btn-warning {
+  color: white;
+}
+
+.delete-btn {
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transform: translate(-0%, 0);
+  width: 33%;
+}
