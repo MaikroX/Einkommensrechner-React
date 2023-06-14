@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 function NeuesEinkommenTemp() {
   return (
     <div className="m-2">
-      <div id="myIncoming0" onclick="showButtons(0)">
+      <div id="myIncoming0">
         <div
           id="incomingState0"
           className="table-top incoming-style d-flex justify-content-center align-items-center mb-1 position-relative  incoming-border-right-openIncoming"
@@ -29,7 +29,6 @@ function NeuesEinkommenTemp() {
                   id="btnBox0"
                 >
                   <Button
-                    onclick="incomingPaid(0)"
                     id="paid0"
                     className="paid-btn btn-primary toggleIndex rounded"
                   >
@@ -45,7 +44,6 @@ function NeuesEinkommenTemp() {
                     </svg>
                   </Button>
                   <Button
-                    onclick="unPaid(0)"
                     id="unPaid0"
                     className="unpaid-btn btn-warning toggleIndex rounded"
                   >
@@ -61,7 +59,6 @@ function NeuesEinkommenTemp() {
                     </svg>
                   </Button>
                   <Button
-                    onclick="deleteIncoming(0)"
                     id="delete0"
                     className="delete-btn btn-danger toggleIndex rounded m-0"
                   >

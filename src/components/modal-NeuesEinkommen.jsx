@@ -1,23 +1,46 @@
 import { Button, Modal } from "react-bootstrap";
 
 function ModalEinkommen({ showModal, closeModal }) {
+  const logoutInput = () => {
+    const getDate = document.getElementById("getDate").value;
+    const timePickerStart = document.getElementById("timePickerStart").value;
+    const timePickerEnde = document.getElementById("timePickerEnde").value;
+    const whereWork = document.getElementById("whereWork").value;
+    const doing = document.getElementById("doing").value;
+    const numberInput = document.getElementById("number-input").value;
+
+    console.log("Eingabe:");
+    console.log("Wann:", getDate);
+    console.log("Beginn:", timePickerStart);
+    console.log("Ende:", timePickerEnde);
+    console.log("Wo:", whereWork);
+    console.log("Was:", doing);
+    console.log("Verdienst:", numberInput);
+
+    closeModal();
+  };
+
   return (
-    <Modal show={showModal} onHide={closeModal} className="modal-einkommen">
+    <Modal
+      show={showModal}
+      onHide={closeModal}
+      className="modal-einkommen text-white"
+      id="newIncomingTemp"
+    >
       <Modal.Header closeButton>
         <Modal.Title>Neues Einkommen</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <form>
-          <div className="form-group">
+        <form className="text-uppercase">
+          <div className="form-group ">
             <label htmlFor="recipient-name" className="col-form-label">
-              WANN
+              Wann
             </label>
             <input
               id="getDate"
               type="date"
               className="form-control text-center"
               placeholder="Wähle ein Datum"
-              oninput="validate()"
             />
           </div>
           <div className="d-flex">
@@ -54,31 +77,29 @@ function ModalEinkommen({ showModal, closeModal }) {
           </div>
           <div className="form-group">
             <label htmlFor="recipient-name" className="col-form-label">
-              WO
+              Wo
             </label>
             <input
               id="whereWork"
               placeholder="Zb. Firmenname"
               type="text"
               className="form-control"
-              oninput="validate()"
             />
           </div>
           <div className="form-group">
             <label htmlFor="recipient-name" className="col-form-label">
-              WAS
+              Was
             </label>
             <input
               id="doing"
               placeholder="Zb. Bar, Dj, Grafikdesign"
               type="text"
               className="form-control"
-              oninput="validate()"
             />
           </div>
           <div className="form-group">
             <label htmlFor="recipient-name" className="col-form-label">
-              VERDIENST{" "}
+              Verdienst{" "}
               <span>
                 <small>(in € Gesamt)</small>
               </span>
@@ -88,7 +109,6 @@ function ModalEinkommen({ showModal, closeModal }) {
               type="text"
               className="form-control"
               id="number-input"
-              oninput="validate()"
             />
             <p id="error-message" className="text-center" />
           </div>
@@ -96,7 +116,10 @@ function ModalEinkommen({ showModal, closeModal }) {
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={closeModal}>
-          Close
+          Schließen
+        </Button>
+        <Button variant="primary" onClick={logoutInput}>
+          Speichern
         </Button>
       </Modal.Footer>
     </Modal>

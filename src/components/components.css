@@ -19,11 +19,23 @@
   background-color: var(--primary-edit);
 }
 
+#newIncomingTemp .modal-content {
+  background-image: radial-gradient(
+    circle,
+    #4f89b7,
+    #4d86b4,
+    #4b84b0,
+    #4981ad,
+    #477faa
+  );
+}
+
 .modal-einkommen .modal-dialog {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  max-width: 400px;
 }
 
 .table-inner-fs {
@@ -102,4 +114,29 @@
   left: 0;
   transform: translate(-0%, 0);
   width: 33%;
+}
+
+#newIncomingTemp .btn-close {
+  filter: invert(1);
+}
+
+.timepicker-style {
+  width: 30vw;
+  max-width: 150px;
+  display: block;
+  height: calc(1.5em + 0.75rem + 2px);
+  /* padding: 0.375rem 0.75rem; */
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
